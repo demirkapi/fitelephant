@@ -1,12 +1,16 @@
-﻿
-	<hr style="clear: both;" >
-	<footer>
+﻿	<footer>
 		<p>
         <!--- CopyLeft - All Wrongs Reserved! --->
         <!--[if lte IE 8]><span style="filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); display: inline-block;"><![endif]-->
 			<span style="-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -o-transform: rotate(180deg); -khtml-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); display: inline-block;">&copy;</span>
 		<!--[if lte IE 8]></span><![endif]-->
-         fitElephant 2012</p>
+         fitElephant 2012
+         |
+         &nbsp;&nbsp;&nbsp;
+         <a href="/?event=aboutus"><i class="icon-briefcase"></i> Gizlilik</a>
+         &nbsp;&nbsp;&nbsp;
+         <a href="/?event=contact"><i class="icon-exclamation-sign"></i> Yasal Notlar</a>
+         </p>
 	</footer>
 </div>
 
