@@ -1,0 +1,1 @@
+User related assets will be placed into this directory.
