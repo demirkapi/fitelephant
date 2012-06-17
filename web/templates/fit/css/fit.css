@@ -10,7 +10,10 @@ img, object, embed, video {
 
 body { padding-top: 90px; /* 60px to make the container go all the way to the bottom of the topbar */
 background-color:#efe; }
-.sidebar-nav { padding: 9px 0; }
+.sidebar-nav { 
+	padding: 9px 0;
+	background-color:#dfd 
+}
 
 
 
@@ -54,6 +57,7 @@ h1 small {
 h2 {
   font-size: 24px;
   line-height: 36px;
+  color:#043;
 }
 h2 small {
   font-size: 18px;
@@ -95,7 +99,7 @@ h6 {
 }
 .nav > li > a:hover {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #efe;
 }
 .nav > .pull-right {
   float: right;
@@ -131,7 +135,7 @@ h6 {
 .nav-list > .active > a:hover {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #009988;
+  background-color: #00cc99;
 }
 .nav-list [class^="icon-"] {
   margin-right: 2px;
@@ -488,3 +492,40 @@ h6 {
   right: 13px;
 }
 
+
+.hero-unit {
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: #ded;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+.hero-unit h1 {
+  margin-bottom: 0;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: inherit;
+  color: #043;
+}
+
+.hero-unit p {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 27px;
+  color: inherit;
+  color: #063;
+}
+
+footer {
+  clear: both;
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size: 11px;
+  font-weight: 200;
+  line-height: 27px;
+  color: #363;
+  border-top: 1px solid #cdc;
+  padding:5px 10px;
+}
