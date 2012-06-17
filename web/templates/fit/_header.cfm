@@ -26,8 +26,6 @@
 </head>
 </cfoutput>
 <body>
-<cfparam name="event" default="home">
-
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container-fluid">

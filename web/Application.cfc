@@ -1,7 +1,7 @@
 ﻿<cfcomponent output="false" displayname="fitElephantApp" hint="fitElephant application.">
  
  	<!--- Set up the application. --->
-	<cfset this.name = "fitElephant0" />
+	<cfset this.name = "fitElephant" />
 	<cfset this.applicationTimeout = CreateTimeSpan( 0, 0, 1, 0 ) />
 	<cfset this.sessionManagement = true />
 	<cfset this.setClientCookies = false />
@@ -18,8 +18,7 @@
    		<cfset application.fit.dir = right(getdirectoryfrompath(getcurrenttemplatepath()),len(getdirectoryfrompath(getcurrenttemplatepath()))-len(expandpath("/"))+1)>
 		<cfset application.fit.tz = CreateObject("java", "java.util.TimeZone").getDefault()>
         
- 
-		<cfreturn true />
+ 		<cfreturn true />
 	</cffunction>
  
 	<cffunction name="OnSessionStart" access="public" returntype="void" output="false" 
@@ -62,6 +61,8 @@
 				<cfthrow message="Ini file has a missing default section!">
 			</cfif>
 		</cfif>
+        
+        <cfparam name="event" default="home">
                 
 		<cfreturn true />
 	</cffunction>
