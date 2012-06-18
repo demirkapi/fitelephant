@@ -8,8 +8,15 @@ img, object, embed, video {
 	width:100%;
 }
 
-body { padding-top: 90px; /* 60px to make the container go all the way to the bottom of the topbar */
-background-color:#efe; }
+body { padding-top: 110px; /* 60px to make the container go all the way to the bottom of the topbar */
+	background-color:#efe; 
+  	font-family: Verdana,"Helvetica Neue", Helvetica, Arial, sans-serif;
+  	font-size: 14px;
+  	line-height: 18px;
+  	color: #333;
+}
+
+}
 .sidebar-nav { 
 	padding: 9px 0;
 	background-color:#dfd 
@@ -48,14 +55,14 @@ h6 small {
   color: #999999;
 }
 h1 {
-  font-size: 30px;
+  font-size: 24px;
   line-height: 36px;
 }
 h1 small {
   font-size: 18px;
 }
 h2 {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 36px;
   color:#043;
 }
@@ -63,7 +70,7 @@ h2 small {
   font-size: 18px;
 }
 h3 {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 27px;
 }
 h3 small {
@@ -155,15 +162,15 @@ h6 {
   min-height: 70px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #009988;
-  background-image: -moz-linear-gradient(top, #30c996, #009988);
-  background-image: -ms-linear-gradient(top, #30c996, #009988);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#30c996), to(#009988));
-  background-image: -webkit-linear-gradient(top, #30c996, #009988);
-  background-image: -o-linear-gradient(top, #30c996, #009988);
-  background-image: linear-gradient(top, #30c996, #009988);
+  background-color: #fff;
+  background-image: -moz-linear-gradient(top, #fff, #cfc);
+  background-image: -ms-linear-gradient(top, #fff, #cfc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#cfc));
+  background-image: -webkit-linear-gradient(top, #fff, #cfc);
+  background-image: -o-linear-gradient(top, #fff, #cfc);
+  background-image: linear-gradient(top, #fff, #cfc);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#30c996', endColorstr='#009988', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#cfc', GradientType=0);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -178,7 +185,7 @@ h6 {
   height: auto;
 }
 .navbar {
-  color: #fff;
+  color: #131;
 }
 .navbar .brand:hover {
   text-decoration: none;
@@ -186,12 +193,12 @@ h6 {
 .navbar .brand {
   float: left;
   display: block;
-  padding: 23px 20px 27px;
+  padding: 10px 50px;
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
   line-height: 1;
-  color: #fff;
+  color: #131;
 }
 .navbar .navbar-text {
   margin-bottom: 0;
@@ -201,7 +208,7 @@ h6 {
   color: #eeeeee;
 }
 .navbar .navbar-link:hover {
-  color: #ffffff;
+  color: #ded;
 }
 .navbar .btn,
 .navbar .btn-group {
@@ -259,7 +266,7 @@ h6 {
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
-  color: #ffffff;
+  color: #131;
   background-color: #1affb3;
   border: 1px solid #008055;
   -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
@@ -336,7 +343,7 @@ h6 {
   float: none;
   padding: 24px 10px 26px;
   line-height: 19px;
-  color: #ded;
+  color: #699;
   text-decoration: none;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -352,14 +359,14 @@ h6 {
 }
 .navbar .nav > li > a:hover {
   background-color: transparent;
-  color: #ffffff;
+  color: #6cc;
   text-decoration: none;
 }
 .navbar .nav .active > a,
 .navbar .nav .active > a:hover {
-  color: #ffffff;
+  color: #699;
   text-decoration: none;
-  background-color: #009988;
+  background-color: #cfc;
 }
 .navbar .divider-vertical {
   height: 70px;
@@ -504,7 +511,7 @@ h6 {
 
 .hero-unit h1 {
   margin-bottom: 0;
-  font-size: 60px;
+  font-size: 36px;
   line-height: 1;
   letter-spacing: -1px;
   color: inherit;
@@ -529,3 +536,21 @@ footer {
   border-top: 1px solid #cdc;
   padding:5px 10px;
 }
+
+
+.tin  { width:550px; background-color:#def; padding:4px 6px; border:1px solid #cde;}
+.ttop { text-align:left; background-color:#cde; padding:4px 6px; font-weight:bold; font-size:14px;}
+.tleft { width:250px; text-align:right; background-color:#def; padding:4px 6px; border-bottom:1px solid #cde;}
+.tright { width:300px; text-align:left; background-color:#f0f5f9; padding:4px 6px; }
+
+.dataPhoto{ float:left; border:1px solid #abc; width:110px; padding:5px; margin:2px; font-size:11px; font-family:Tahoma, Geneva, sans-serif; text-align:center; min-height:180px;}
+
+.bmi_x { background-color:#def; text-align:center; font-size:10px; border-bottom: 1px solid #789; border-right: 1px solid #abc;}
+.bmi_y { background-color:#def; text-align:right; font-size:10px; border-right: 1px solid #789; border-bottom: 1px solid #abc;}
+.bmi_su { background-color:#99f; text-align:center; font-size:10px;}
+.bmi_u { background-color:#ccf; text-align:center; font-size:10px;}
+.bmi_n { background-color: #cfc; text-align:center; font-size:10px;}
+.bmi_ov { background-color: #ffc; text-align:center; font-size:10px;}
+.bmi_ob1 { background-color: #fcc; text-align:center; font-size:10px;}
+.bmi_ob2 { background-color: #f99; text-align:center; font-size:10px;}
+.bmi_ob3 { background-color: #f66; text-align:center; font-size:10px;}
