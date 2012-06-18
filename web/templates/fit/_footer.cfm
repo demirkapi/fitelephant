@@ -1,4 +1,4 @@
-﻿	<footer>
+﻿    <footer>
 		<p>
         <!--- CopyLeft - All Wrongs Reserved! --->
         <!--[if lte IE 8]><span style="filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); display: inline-block;"><![endif]-->
@@ -7,9 +7,9 @@
          fitElephant 2012
          |
          &nbsp;&nbsp;&nbsp;
-         <a href="/?event=aboutus"><i class="icon-briefcase"></i> Gizlilik</a>
+         <a href="/?event=privacy"><i class="icon-briefcase"></i> Gizlilik</a>
          &nbsp;&nbsp;&nbsp;
-         <a href="/?event=contact"><i class="icon-exclamation-sign"></i> Yasal Notlar</a>
+         <a href="/?event=disclaimer"><i class="icon-exclamation-sign"></i> Yasal Notlar</a>
          </p>
 	</footer>
 </div>

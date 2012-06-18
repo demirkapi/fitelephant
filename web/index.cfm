@@ -16,6 +16,12 @@
     <cfcase value="profile,profil">
     	<cfinclude template="#application.fit.dir#templates/#application.settings.template#/profile.cfm">
     </cfcase>
+	<cfcase value="why,neden">
+    	<cfinclude template="#application.fit.dir#templates/#application.settings.template#/why.cfm">
+    </cfcase>
+    <cfcase value="healthcheck">
+    	<cfinclude template="#application.fit.dir#templates/#application.settings.template#/healthcheck.cfm">
+    </cfcase>
     <cfdefaultcase>
     	<cfinclude template="#application.fit.dir#templates/#application.settings.template#/home.cfm">
     </cfdefaultcase>
