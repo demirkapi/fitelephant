@@ -4,16 +4,16 @@
     </div>
     <div class="span9">
         <div class="hero-unit">
-			<p>fitElephant ile sağlıklı bir hayata ...</p>
-			<h1>Hoşgeldiniz!</h1>
-            
+			<p>fitElephant ile ...</p>
+			<h1>Sağlıklı Bir Dünyaya Hoşgeldiniz!</h1>
+            <br />
         </div>
         <div class="row-fluid">
             <div class="span4">
                 <h2>Neden fitElephant?</h2>
                 <p>fitElephant projesi size nasıl yardımcı olabilir?</p>
                 <p><a href="/?event=why" class="thumbnail"><img src="includes/img/fitbalance.jpg" name="fitBalance" width="260" height="180" /></a></p>
-                <p><a class="btn" href="#">detaylar &raquo;</a></p>
+                <p><a class="btn" href="/?event=why">detaylar &raquo;</a></p>
             </div>
             <div class="span4">
                 <h2>Nasıl Katılabilirsiniz?</h2>

@@ -9,6 +9,7 @@
 		<li <cfif event EQ 'settings'>class="active"</cfif>> <a href="/?event=settings"><i class="icon-cog"></i> Ayarlar</a></li>
                   		
     	<li class="nav-header"><i class="icon-heart"></i> fitElephant</li>
+        <li <cfif event EQ 'healthcheck'>class="active"</cfif>><a href="/?event=healthcheck"><i class=" icon-ok-circle"></i> Sağlıklı mıyız?</a></li>
         <li <cfif event EQ 'success'>class="active"</cfif>><a href="/?event=success"><i class="icon-thumbs-up"></i> Başarı Hikayeleri</a></li>	
     	<li <cfif event EQ 'blog'>class="active"</cfif>><a href="/?event=blog"><i class="icon-star-empty"></i> Blog</a></li> 
     	<li <cfif event EQ 'competiton'>class="active"</cfif>><a href="/?event=competiton"><i class="icon-signal"></i> Yarışmalar</a></li>

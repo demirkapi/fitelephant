@@ -34,7 +34,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			</a>
-			<a class="brand" href="#">fitElephant</a>
+			<a class="brand" href="#"><img src="includes/img/fitlogo70.png" name="fitElephant" width="273" height="70" hspace="0" vspace="0" border="0"></a>
 			<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 				<i class="icon-user"></i> <cfoutput>#session.user.username#</cfoutput>
@@ -47,10 +47,10 @@
 				</ul>
 			</div>
 			<div class="nav-collapse pull-right">
-				<ul class="nav">
-					<li <cfif event EQ 'home'>class="active"</cfif>><a href="/?event=home"><i class="icon-home icon-white"></i> Anasayfa</a></li>
-					<li <cfif event EQ 'aboutus'>class="active"</cfif>><a href="/?event=aboutus"><i class="icon-globe icon-white"></i> Hakkımızda</a></li>
-					<li <cfif event EQ 'contact'>class="active"</cfif>><a href="/?event=contact"><i class="icon-envelope icon-white"></i> İletişim</a></li>
+				<ul class="nav nav-pills">
+					<li <cfif event EQ 'home'>class="active"</cfif>><a href="/?event=home"><i class="icon-home"></i> Anasayfa</a></li>
+					<li <cfif event EQ 'aboutus'>class="active"</cfif>><a href="/?event=aboutus"><i class="icon-globe"></i> Hakkımızda</a></li>
+					<li <cfif event EQ 'contact'>class="active"</cfif>><a href="/?event=contact"><i class="icon-envelope"></i> İletişim</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
