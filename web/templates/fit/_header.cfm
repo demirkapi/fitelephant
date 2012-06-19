@@ -34,7 +34,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			</a>
-			<a class="brand" href="#"><img src="includes/img/fitlogo70.png" name="fitElephant" width="273" height="70" hspace="0" vspace="0" border="0"></a>
+			<a class="brand" href="/"><img src="includes/img/fitlogo70.png" name="fitElephant" width="273" height="70" hspace="0" vspace="0" border="0"></a>
 			<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 				<i class="icon-user"></i> <cfoutput>#session.user.username#</cfoutput>

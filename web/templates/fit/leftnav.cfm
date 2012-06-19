@@ -2,7 +2,7 @@
 <cfoutput>
 <div class="well sidebar-nav">
 	<ul class="nav nav-list">
-    	<li <cfif event EQ 'home'>class="active"</cfif>><a href="/?event=home"><i class="icon-home"></i> Anasayfa</a></li>
+    	<li <cfif event EQ 'home'>class="active"</cfif>><a href="/"><i class="icon-home"></i> Anasayfa</a></li>
 		<li class="nav-header"><i class="icon-user"></i> Profil</li>
 		<li <cfif event EQ 'userinfo'>class="active"</cfif>><a href="/?event=userinfo"><i class="icon-edit"></i> Bilgi Girişi</a></li>
         <li <cfif event EQ 'photos'>class="active"</cfif>><a href="/?event=photos"><i class="icon-edit"></i> Fotoğraflar</a></li>

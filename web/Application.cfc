@@ -3,9 +3,15 @@
  	<!--- Set up the application. --->
 	<cfset this.name = "fitElephant" />
 	<cfset this.applicationTimeout = CreateTimeSpan( 0, 0, 1, 0 ) />
+	<cfset this.sessiontimeout = CreateTimeSpan(0,0,10,0)> 
 	<cfset this.sessionManagement = true />
+	<cfset this.loginstorage = "Session">
+	<!--- ORM has been temporarly disabled 
+	<cfset this.ormenabled = "true"> 
+	<cfset this.datasource = "fit">     
+	--->
 	<cfset this.setClientCookies = false />
-    <cfset this.mappings["/com"] = "../com">
+	<cfset this.mappings["/com"] = "../com">
  
  	<!--- Define the page request properties. --->
 	<cfsetting requesttimeout="999" showdebugoutput="false" enablecfoutputonly="false" />
@@ -18,6 +24,28 @@
    		<cfset application.fit.dir = right(getdirectoryfrompath(getcurrenttemplatepath()),len(getdirectoryfrompath(getcurrenttemplatepath()))-len(expandpath("/"))+1)>
 		<cfset application.fit.tz = CreateObject("java", "java.util.TimeZone").getDefault()>
         
+		<cfscript> 
+			Application.availableResources = 0; 
+			Application.counter = 1; 
+			Application.sessions = 0; 
+		</cfscript> 
+
+		<!--- DB test has been temporarily disabled.
+		<cftry> 
+        	<!--- Test whether the DB that this application uses is accessible by selecting some data. ---> 
+			<cfquery name="testDB" dataSource="cfdocexamples" maxrows="2"> 
+            	SELECT Emp_ID FROM employee 
+			</cfquery> 
+			<!--- If we get database error, report it to the user, log the error information, and do not start the application. ---> 
+			<cfcatch type="database"> 
+				The database has not been configured.
+				<cflog 	file="#this.Name#" type="error" 
+                		text="cfdocexamples DB not available. message: #cfcatch.message#  
+							Detail: #cfcatch.detail# Native Error: #cfcatch.NativeErrorCode#"> 
+				<cfreturn false> 
+			</cfcatch> 
+		</cftry> 
+        --->
  		<cfreturn true />
 	</cffunction>
  
@@ -37,6 +65,16 @@
         <cfparam name="session.user.rights" default="0" />
         <cfparam name="session.user.rememberMe" type="numeric" default="0" />
         <cfparam name="session.user.loginAttempts" type="numeric" default="0" />
+        
+		<cfscript> 
+			session.started = now(); 
+		</cfscript> 
+        
+		<cflock timeout="5" throwontimeout="No" type="EXCLUSIVE" scope="SESSION"> 
+			<cfset Application.sessions = Application.sessions + 1> 
+		</cflock> 
+        
+        <cflog file="#this.name#" type="Information" text="Session: #Session.sessionid# started."> 
  
 		<cfreturn />
 	</cffunction>
@@ -92,6 +130,8 @@
 		<cfargument name="SessionScope" type="struct" required="true" />
  
 		<cfargument name="ApplicationScope" type="struct" required="false" default="#StructNew()#" 	/>
+        
+		<cflog file="#this.name#" type="Information" text="Session: #arguments.SessionScope.sessionid# ended."> 
  
 		<cfreturn />
 	</cffunction>
@@ -101,6 +141,8 @@
  
 		<!--- Define arguments. --->
 		<cfargument name="ApplicationScope" type="struct"  required="false"	default="#StructNew()#" />
+        
+		<cflog file="#this.name#" type="Information" text="Application #ApplicationScope.applicationname# Ended">
  
 		<cfreturn />
 	</cffunction>
@@ -112,6 +154,26 @@
 		<!--- Define arguments. --->
 		<cfargument name="Exception" type="any" required="true" /> 
 		<cfargument	name="EventName" type="string" required="false" default="" />
+		
+		<!--- Log all errors in an application-specific log file. ---> 
+		<cflog file="#this.name#" type="error" text="Event Name: #Eventname#" > 
+		<cflog file="#this.name#" type="error" text="Message: #except.message#"> 
+		
+		<!--- Some exceptions, including server-side validation errors, do not generate a rootcause structure. ---> 
+		<cfif isdefined("exception.rootcause")> 
+			<cflog file="#this.name#" type="error" text="Root Cause Message: #exception.rootcause.message#"> 
+		</cfif>  
+		
+		<!--- Display an error message if there is a page context. ---> 
+		<cfif NOT (Arguments.EventName IS onSessionEnd) OR (Arguments.EventName IS onApplicationEnd)> 
+			<cfoutput> 
+				<h2>An unexpected error occurred.</h2> 
+				<p>Please provide the following information to technical support:</p> 
+				<p>Error Event: #EventName#</p> 
+				<p>Error details:<br> 
+				<cfdump var=#exception#></p> 
+			</cfoutput> 
+		</cfif> 
  
 		<cfreturn />
 	</cffunction>
