@@ -147,7 +147,7 @@
 		<cfreturn />
 	</cffunction>
  
- 	<!--- temporary disabled
+ 	
  	<cffunction name="OnError" access="public" returntype="void" output="true" 
     			hint="Fires when an exception occures that is not caught by a try/catch.">
  
@@ -157,7 +157,7 @@
 		
 		<!--- Log all errors in an application-specific log file. ---> 
 		<cflog file="#this.name#" type="error" text="Event Name: #Eventname#" > 
-		<cflog file="#this.name#" type="error" text="Message: #except.message#"> 
+		<cflog file="#this.name#" type="error" text="Message: #exception.message#"> 
 		
 		<!--- Some exceptions, including server-side validation errors, do not generate a rootcause structure. ---> 
 		<cfif isdefined("exception.rootcause")> 
@@ -167,15 +167,40 @@
 		<!--- Display an error message if there is a page context. ---> 
 		<cfif NOT (Arguments.EventName IS onSessionEnd) OR (Arguments.EventName IS onApplicationEnd)> 
 			<cfoutput> 
+            <div style="width:700px; padding:50px;">
 				<h2>An unexpected error occurred.</h2> 
 				<p>Please provide the following information to technical support:</p> 
-				<p>Error Event: #EventName#</p> 
-				<p>Error details:<br> 
-				<cfdump var=#exception#></p> 
+            	
+                <!--- Save error details into a parameter --->
+                <cfsavecontent variable="errorMessage">  
+					<p>
+                    <b>An error occurred:</b> http://#cgi.server_name##cgi.script_name#?#cgi.query_string#
+                    <br />
+					<b>Time:</b> #dateFormat(now(), "short")# #timeFormat(now(), "short")#
+                    <br />
+					<b>Error Event:</b> #EventName#
+                    <br />
+					<b>Error details:</b>
+                    <br /> 
+                    <cfdump var="#exception#">
+					</p>
+    	        </cfsavecontent>  
+            
+			<!--- Show error details only development mode --->
+			<cfif application.settings.mode CONTAINS 'dev' OR (IsDefined('url.debug') AND url.debug EQ application.settings.reloadkey)>
+            	#errorMessage#
+			</cfif>			            
+			</div>
 			</cfoutput> 
+            
+            <cfmail from="#application.settings.emailsender#" to="#application.settings.emailadmin#" 
+            		bcc="#application.settings.emailbcc#" 
+            		subject="Error: #Dateformat(Now(),'short')# - http://#cgi.server_name##cgi.script_name#?#cgi.query_string#" 
+                    charset="utf-8" type="html">
+				#errorMessage#
+            </cfmail> 
 		</cfif> 
- 
 		<cfreturn />
 	</cffunction>
-	 --->
+	
 </cfcomponent>
