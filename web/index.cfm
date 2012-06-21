@@ -32,7 +32,5 @@
     </cfdefaultcase>
 </cfswitch>
 
-
-
 <!--- footer template --->
 <cfinclude template="#application.fit.dir#templates/#application.settings.template#/_footer.cfm">
