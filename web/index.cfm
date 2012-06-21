@@ -1,7 +1,6 @@
 ﻿<!--- ColdCouse for SES --->
 <cfset application.coldcourse.dispatch(cgi.path_info, cgi.script_name) />
 
-
 <!--- header template --->
 <cfinclude template="#application.fit.dir#templates/#application.settings.template#/_header.cfm">
 
