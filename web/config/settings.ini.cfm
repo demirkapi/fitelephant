@@ -11,3 +11,5 @@ dsn = fit
 template = fit
 reloadkey = yukle
 cfversion = 10
+sesbased = 1
+sesindex = 1

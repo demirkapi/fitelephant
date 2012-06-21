@@ -29,6 +29,12 @@
 			Application.counter = 1; 
 			Application.sessions = 0; 
 		</cfscript> 
+        
+        <!--- ColdCourse Config --->
+        <cfset application.coldcourse = createObject("component","model.Coldcourse").init("/config/coldcourse.config.cfm")>
+        
+        <!--- Utility CFC --->
+        <cfset application.u = createObject("component","model.util")>
 
 		<!--- DB test has been temporarily disabled.
 		<cftry> 
@@ -101,6 +107,8 @@
 		</cfif>
         
         <cfparam name="event" default="home">
+        <!--- Utility CFC --->
+        <cfset application.u = createObject("component","model.util")>
                 
 		<cfreturn true />
 	</cffunction>

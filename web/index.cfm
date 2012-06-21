@@ -1,7 +1,12 @@
-﻿<!--- header template --->
+﻿<!--- ColdCouse for SES --->
+<cfset application.coldcourse.dispatch(cgi.path_info, cgi.script_name) />
+
+
+<!--- header template --->
 <cfinclude template="#application.fit.dir#templates/#application.settings.template#/_header.cfm">
 
-<cfparam name="event" default="home">
+<cfparam name="event" default="#Rereplace(cgi.path_info,'/','ALL')#">
+<cfset event = RereplaceNoCase(cgi.path_info,'/','','ALL')>
 
 <cfswitch expression="#event#">
 	<cfcase value="home,anasayfa">
