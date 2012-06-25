@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="fitElephant.com - Sağlıklı Yaşam Portalınız">
 	<meta name="author" content="CFTR">
+	<base href="http://#CGI.HTTP_HOST#/" />
 	<link href="includes/css/bootstrap.css" rel="stylesheet">
 	<link href="includes/css/bootstrap-responsive.css" rel="stylesheet">
 
