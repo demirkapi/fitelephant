@@ -10,7 +10,7 @@
 	<link href="includes/css/bootstrap.css" rel="stylesheet">
 	<link href="includes/css/bootstrap-responsive.css" rel="stylesheet">
 
-	<!--- Custom Template CSS --->    
+	<!--- Custom Template CSS --->
    	<link href="templates/#application.settings.template#/css/fit.css" rel="stylesheet">
 
 	<!--- Le HTML5 shim, for IE6-8 support of HTML5 elements --->
@@ -48,10 +48,10 @@
 				</ul>
 			</div>
 			<div class="nav-collapse pull-right">
-				<ul class="nav nav-pills">
-					<li <cfif event EQ 'home'>class="active"</cfif>><a href="/?event=home"><i class="icon-home"></i> Anasayfa</a></li>
-					<li <cfif event EQ 'aboutus'>class="active"</cfif>><a href="/?event=aboutus"><i class="icon-globe"></i> Hakkımızda</a></li>
-					<li <cfif event EQ 'contact'>class="active"</cfif>><a href="/?event=contact"><i class="icon-envelope"></i> İletişim</a></li>
+				<ul class="nav nav-pills"><cfoutput>
+					<li <cfif event EQ 'home'>class="active"</cfif>><a href="#application.functions.createLink(rewrite=application.settings.rewrite, event="home")#"><i class="icon-home"></i> Anasayfa</a></li>
+					<li <cfif event EQ 'aboutus'>class="active"</cfif>><a href="#application.functions.createLink(rewrite=application.settings.rewrite, event="aboutus")#"><i class="icon-globe"></i> Hakkımızda</a></li>
+					<li <cfif event EQ 'contact'>class="active"</cfif>><a href="#application.functions.createLink(rewrite=application.settings.rewrite, event="contact")#"><i class="icon-envelope"></i> İletişim</a></li></cfoutput>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
