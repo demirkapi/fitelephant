@@ -1,6 +1,6 @@
 ﻿<div class="row-fluid">
     <div class="span3">
-        <cfinclude template="#application.fit.dir#templates/#application.settings.template#/leftnav.cfm">
+        <cfinclude template="../../templates/#application.settings.template#/leftnav.cfm">
     </div>
     <div class="span9">
         <div class="hero-unit">
@@ -30,4 +30,3 @@
         </div>
     </div>
 </div>
-

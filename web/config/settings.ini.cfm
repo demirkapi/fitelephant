@@ -11,3 +11,4 @@ dsn = fit
 template = fit
 reloadkey = yukle
 cfversion = 10
+rewrite = true

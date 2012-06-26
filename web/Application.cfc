@@ -46,6 +46,9 @@
 			</cfcatch> 
 		</cftry> 
         --->
+		
+		<!--- Application Functions --->
+		<cfset application.functions = createObject("component","com.functions").init() />
  		<cfreturn true />
 	</cffunction>
  
