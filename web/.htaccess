@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond $1 !^(index\.cfm|includes|templates|admin|robots\.txt|sitemap\.xml|sitemap)
+RewriteRule ^(.*)$ index.cfm/$1 [L]
