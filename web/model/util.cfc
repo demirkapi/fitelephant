@@ -10,4 +10,5 @@
 		<cfset theLink = "/index.cfm/#arguments.eventName#">
 		<cfreturn theLink>
 	</cffunction>
+    
 </cfcomponent>
