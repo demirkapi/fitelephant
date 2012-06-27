@@ -2,34 +2,34 @@
 <cfset application.coldcourse.dispatch(cgi.path_info, cgi.script_name) />
 
 <!--- header template --->
-<cfinclude template="#application.fit.dir#templates/#application.settings.template#/_header.cfm">
+<cfinclude template="templates/#application.settings.template#/_header.cfm">
 
 <cfparam name="event" default="#Rereplace(cgi.path_info,'/','ALL')#">
 <cfset event = RereplaceNoCase(cgi.path_info,'/','','ALL')>
 
 <cfswitch expression="#event#">
 	<cfcase value="home,anasayfa">
-    	<cfinclude template="#application.fit.dir#templates/#application.settings.template#/home.cfm">
+    	<cfinclude template="templates/#application.settings.template#/home.cfm">
     </cfcase>
     <cfcase value="aboutus,hakkimizda">
-    	<cfinclude template="#application.fit.dir#templates/#application.settings.template#/aboutus.cfm">
+    	<cfinclude template="templates/#application.settings.template#/aboutus.cfm">
     </cfcase>
     <cfcase value="contact,iletisim">
-    	<cfinclude template="#application.fit.dir#templates/#application.settings.template#/contact.cfm">
+    	<cfinclude template="templates/#application.settings.template#/contact.cfm">
     </cfcase>
     <cfcase value="profile,profil">
-    	<cfinclude template="#application.fit.dir#templates/#application.settings.template#/profile.cfm">
+    	<cfinclude template="templates/#application.settings.template#/profile.cfm">
     </cfcase>
 	<cfcase value="why,neden">
-    	<cfinclude template="#application.fit.dir#templates/#application.settings.template#/why.cfm">
+    	<cfinclude template="templates/#application.settings.template#/why.cfm">
     </cfcase>
     <cfcase value="healthcheck">
-    	<cfinclude template="#application.fit.dir#templates/#application.settings.template#/healthcheck.cfm">
+    	<cfinclude template="templates/#application.settings.template#/healthcheck.cfm">
     </cfcase>
     <cfdefaultcase>
-    	<cfinclude template="#application.fit.dir#templates/#application.settings.template#/home.cfm">
+    	<cfinclude template="templates/#application.settings.template#/home.cfm">
     </cfdefaultcase>
 </cfswitch>
 
 <!--- footer template --->
-<cfinclude template="#application.fit.dir#templates/#application.settings.template#/_footer.cfm">
+<cfinclude template="templates/#application.settings.template#/_footer.cfm">

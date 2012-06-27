@@ -6,10 +6,10 @@
 		<!--[if lte IE 8]></span><![endif]-->
          fitElephant 2012
          |
+         &nbsp;&nbsp;&nbsp;<cfoutput>
+         <a href="#application.u.cl('privacy')#"><i class="icon-briefcase"></i> Gizlilik</a>
          &nbsp;&nbsp;&nbsp;
-         <a href="/?event=privacy"><i class="icon-briefcase"></i> Gizlilik</a>
-         &nbsp;&nbsp;&nbsp;
-         <a href="/?event=disclaimer"><i class="icon-exclamation-sign"></i> Yasal Notlar</a>
+         <a href="#application.u.cl('disclaimer')#"><i class="icon-exclamation-sign"></i> Yasal Notlar</a></cfoutput>
          </p>
 	</footer>
 </div>
