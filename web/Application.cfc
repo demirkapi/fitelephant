@@ -34,7 +34,7 @@
         <cfset application.coldcourse = createObject("component","model.Coldcourse").init("/config/coldcourse.config.cfm")>
         
         <!--- Utility CFC --->
-        <cfset application.u = createObject("component","model.util")>
+        <cfset application.u = createObject("component","model.util").init()>
 
 		<!--- DB test has been temporarily disabled.
 		<cftry> 
@@ -155,7 +155,7 @@
 		<cfreturn />
 	</cffunction>
  
- 	
+ <!--- 	
  	<cffunction name="OnError" access="public" returntype="void" output="true" 
     			hint="Fires when an exception occures that is not caught by a try/catch.">
  
@@ -210,5 +210,5 @@
 		</cfif> 
 		<cfreturn />
 	</cffunction>
-	
+	--->
 </cfcomponent>
